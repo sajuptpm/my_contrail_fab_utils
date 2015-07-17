@@ -27,17 +27,17 @@ host_build = 'saju@ct1-testjenkins-puppet-rjil-gate-1804'
 
 #Role definition of the hosts.
 env.roledefs = {
-    'all': [host1, host2, host3, host4, host5, host6, host7, host8, host9, host10],
-    'cfgm': [host1, host2, host3],
-    'openstack': [host1],
-    'control': [host1, host2, host3],
-    'compute': [host4, host5, host6, host7, host8, host9, host10],
-    'collector': [host1, host2, host3],
-    'webui': [host1],
-    'database': [host1, host2, host3],
+    'all': [host1],
+    'cfgm': [host1],
+    #'openstack': [host1],
+    #'control': [host1, host2, host3],
+    #'compute': [host4, host5, host6, host7, host8, host9, host10],
+    #'collector': [host1, host2, host3],
+    #'webui': [host1],
+    'database': [host1],
     'build': [host_build],
-    'storage-master': [host1],
-    'storage-compute': [host4, host5, host6, host7, host8, host9, host10],
+    #'storage-master': [host1],
+    #'storage-compute': [host4, host5, host6, host7, host8, host9, host10],
     # 'vgw': [host4, host5], # Optional, Only to enable VGW. Only compute can support vgw
     # 'tsn': [host10], # Optional, Only to enable TSN. Only compute can support TSN
     # 'toragent': [host10], Optional, Only to enable Tor Agent. Only compute can
@@ -46,41 +46,41 @@ env.roledefs = {
 }
 
 env.hostnames = {
-    'all': ['a0s1', 'a0s2', 'a0s3','a0s4', 'a0s5', 'a0s6', 'a0s7', 'a0s8', 'a0s9', 'a0s10','backup_node']
+    'all': ['ct1-testjenkins-puppet-rjil-gate-1804']
 }
 
 #Openstack admin password
 env.openstack_admin_password = 'secret123'
 
-env.password = 'secret'
+env.password = ''
 #Passwords of each host
 env.passwords = {
-    host1: 'secret',
-    host2: 'secret',
-    host3: 'secret',
-    host4: 'secret',
-    host5: 'secret',
-    host6: 'secret',
-    host7: 'secret',
-    host8: 'secret',
-    host9: 'secret',
-    host10: 'secret',
+    host1: '',
+    #host2: 'secret',
+    #host3: 'secret',
+    #host4: 'secret',
+    #host5: 'secret',
+    #host6: 'secret',
+    #host7: 'secret',
+    #host8: 'secret',
+    #host9: 'secret',
+    #host10: 'secret',
     #  backup_node: 'secret',
-    host_build: 'secret',
+    host_build: '',
 }
 
 #For reimage purpose
 env.ostypes = {
-    host1: 'centos',
-    host2: 'centos',
-    host3: 'centos',
-    host4: 'centos',
-    host5: 'centos',
-    host6: 'centos',
-    host7: 'centos',
-    host8: 'centos',
-    host9: 'centos',
-    host10: 'centos',
+    host1: 'ubuntu',
+    #host2: 'centos',
+    #host3: 'centos',
+    #host4: 'centos',
+    #host5: 'centos',
+    #host6: 'centos',
+    #host7: 'centos',
+    #host8: 'centos',
+    #host9: 'centos',
+    #host10: 'centos',
 }
 env.orchestrator = 'openstack' #other values are 'vcenter' default:openstack
 
