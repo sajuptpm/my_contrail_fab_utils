@@ -36,9 +36,9 @@ def stop_cfgm():
 def stop_cfgm_node(*args):
     for host_string in args:
         with settings(host_string=host_string, warn_only=True):
-            sudo('service supervisor-config stop')
+            #sudo('service supervisor-config stop')
             sudo('service neutron-server stop')
-            sudo('service supervisor-support-service stop')
+            #sudo('service supervisor-support-service stop')
 
 @task
 @roles('cfgm')

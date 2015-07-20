@@ -889,7 +889,7 @@ def upgrade_contrail(from_rel, pkg):
     """Upgrades all the contrail pkgs in all nodes."""
     execute('install_pkg_all', pkg)
     execute('zookeeper_rolling_restart')
-    #execute('stop_cfgm')
+    execute('stop_cfgm')
     #execute('stop_rabbitmq')
     #execute('stop_collector')
     #execute('upgrade_openstack', from_rel, pkg)
