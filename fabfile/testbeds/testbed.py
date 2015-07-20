@@ -54,8 +54,8 @@ env.openstack_admin_password = 'secret123'
 
 env.password = ''
 #Passwords of each host
-env.passwords = {
-    host1: '',
+#env.passwords = {
+#    host1: '',
     #host2: 'secret',
     #host3: 'secret',
     #host4: 'secret',
@@ -66,8 +66,8 @@ env.passwords = {
     #host9: 'secret',
     #host10: 'secret',
     #  backup_node: 'secret',
-    host_build: '',
-}
+#    host_build: '',
+#}
 
 #For reimage purpose
 env.ostypes = {
