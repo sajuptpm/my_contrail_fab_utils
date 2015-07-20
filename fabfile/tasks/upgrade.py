@@ -891,8 +891,8 @@ def upgrade_contrail(from_rel, pkg):
     execute('zookeeper_rolling_restart')
     execute('stop_cfgm')
     execute('stop_rabbitmq')
-    #execute('stop_collector') #collector not installed in build env
-    #execute('upgrade_openstack', from_rel, pkg)
+    #execute('stop_collector') #SM:collector not installed in build env
+    #execute('upgrade_openstack', from_rel, pkg) #SM:don't want to upgrade openstack node
     #execute('upgrade_database', from_rel, pkg)
     #execute('upgrade_cfgm', from_rel, pkg)
     #execute('setup_rabbitmq_cluster', True)
