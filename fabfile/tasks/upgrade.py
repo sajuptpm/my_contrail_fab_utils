@@ -888,7 +888,7 @@ def fix_vrouter_configs_node(*args):
 def upgrade_contrail(from_rel, pkg):
     """Upgrades all the contrail pkgs in all nodes."""
     execute('install_pkg_all', pkg)
-    #execute('zookeeper_rolling_restart')
+    execute('zookeeper_rolling_restart')
     #execute('stop_cfgm')
     #execute('stop_rabbitmq')
     #execute('stop_collector')
